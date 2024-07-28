@@ -175,7 +175,7 @@ static void rjv3_set_hdd_serial(uint8_t* serial_buf, char* fake_serial) {
     }
 
 info_err:
-    PR_ERRNO("无法从 /etc/mtab 获取根分区挂载设备信息，请使用 --fake-serial 选项手动指定硬盘序列号");
+    // PR_ERRNO("无法从 /etc/mtab 获取根分区挂载设备信息，请使用 --fake-serial 选项手动指定硬盘序列号");
 close_return:
     if (_fp != NULL) fclose(_fp);
     if (_root_dev) free(_root_dev);
@@ -477,8 +477,8 @@ RESULT rjv3_process_result_prop(ETH_EAP_FRAME* frame) {
         _msg = NULL;
         _msg = (RJ_PROP*)lookup_data(_srv_msg, NULL, rjv3_is_echokey_prop);
         if (_msg == NULL) {
-            PR_ERR("无法找到 echo key 的位置，将不能进行心跳");
-            sleep(60);
+            // PRERR("无法找到 echo key 的位置，将不能进行心跳");
+            sleep(30);
             return FAILURE;
         } else {
             uint32_t _echokey = 0;
