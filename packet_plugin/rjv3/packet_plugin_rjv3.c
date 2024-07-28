@@ -345,7 +345,7 @@ void rjv3_save_config(struct _packet_plugin* this) {
 static void packet_plugin_rjv3_print_banner() {
     PR_INFO("\nRJv3 for MiniEAP " VERSION "\n"
             "V3 校验算法来自 hyrathb@GitHub\n"
-            "Hamster Tian, 2016\n\n");
+            "Hamster Tian, 2024\n\n");
 }
 
 PACKET_PLUGIN* packet_plugin_rjv3_new() {
