@@ -89,7 +89,7 @@ static int init_cfg(int argc, char* argv[]) {
     init_packet_plugin_list();
 
     PR_RAW("MiniEAP " VERSION "\n"
-           "Hamster Tian, 2016\n\n");
+           "Hamster Tian, 2024\n\n");
 
     if (IS_FAIL(init_program_config(argc, argv))) {
         PR_ERR("参数初始化错误");
