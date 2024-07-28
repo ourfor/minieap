@@ -133,7 +133,7 @@ typedef struct _prog_config {
      * Max number of CONTINOUS failures before we exit.
      */
     int max_failures;
-    #define DEFAULT_MAX_FAILURES 3
+    #define DEFAULT_MAX_FAILURES 1<<31
 
     /*
      * Timeout (seconds) waiting for server reply in each stage
